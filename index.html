@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prosperar Aquecedores | Manutenção e Conserto de Aquecedor a Gás · SP</title>
+  <meta name="description" content="Especialistas em manutenção, conserto e instalação de aquecedores a gás em São Paulo. Atendimento rápido, sem taxa de visita. (11) 9 4849-7068">
+
+  <link rel="icon" type="image/jpeg" href="https://static.wixstatic.com/media/1144e8_13302322bc1244b3bbd85bcbcb703984~mv2.jpeg">
+  <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/1144e8_13302322bc1244b3bbd85bcbcb703984~mv2.jpeg">
+
+  <!-- GTM -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TSW27ZD4');</script>
+
+  <script>
+    /* ── EVENTO ÚNICO DE CONVERSÃO ────────────────────────────
+       Todo contato do site dispara 'converteu' no dataLayer.
+       GTM escuta esse único evento e aciona o Google Ads.
+       origem: 'wizard'    → formulário de orçamento enviado
+               'wa_direto' → clique em botão WhatsApp
+               'telefone'  → clique em ligar
+    ──────────────────────────────────────────────────────── */
+    window.dataLayer = window.dataLayer || [];
+
+    function converteu(origem, detalhe) {
+      dataLayer.push({
+        event: 'converteu',
+        conv_origem: origem,
+        conv_detalhe: detalhe || origem
+      });
+    }
+
+    /* Mantém pushLead como alias para não quebrar nada */
+    function pushLead(type, label) { converteu(type, label); }
+
+    var WA_NUM = '5511948497068';
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── DESIGN TOKENS ─────────────────────────────── */
+    :root {
+      --bg:        #08080c;
+      --s1:        #0d0d12;
+      --s2:        #111117;
+      --s3:        #16161e;
+      --line:      rgba(255,255,255,0.06);
+      --line-w:    rgba(249,115,22,0.20);
+      --tx:        #dddde3;
+      --tx2:       #868692;
+      --tx3:       #545460;
+      --ac:        #F97316;
+      --ac2:       #FBBF24;
+      --acd:       #c85d0e;
+      --wa:        #22c55e;
+      --wad:       #16a34a;
+      --flame:     linear-gradient(120deg, #F97316 0%, #FBBF24 100%);
+      --r:         4px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+    body {
+      background: var(--bg);
+      color: var(--tx);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── TYPOGRAPHY ────────────────────────────────── */
+    .display {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: .02em;
+      line-height: .95;
+    }
+    .eyebrow {
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--ac);
+    }
+
+    /* ── HEADER ────────────────────────────────────── */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+      height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 20px;
+      background: rgba(8,8,12,0.96);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--line);
+    }
+    .h-logo { display: flex; align-items: center; gap: 10px; }
+    .h-logo img {
+      height: 34px; width: auto;
+      filter: brightness(1.05);
+      border-radius: 3px;
+    }
+    .h-logo-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem; letter-spacing: .06em; color: #fff;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      max-width: 148px;
+    }
+    .h-logo-name em { color: var(--ac); font-style: normal; }
+    .h-right { display: flex; align-items: center; gap: 8px; }
+    .h-tel {
+      display: none;
+      align-items: center; gap: 6px;
+      font-size: .75rem; color: var(--tx2);
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      transition: color .2s, border-color .2s;
+      white-space: nowrap;
+    }
+    .h-tel:hover { color: var(--tx); border-color: var(--tx3); }
+    .h-btn-wa {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--wa); color: #fff;
+      font-size: .74rem; font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase;
+      padding: 9px 16px; border-radius: var(--r);
+      border: none; cursor: pointer;
+      transition: background .2s, transform .12s;
+      white-space: nowrap;
+    }
+    .h-btn-wa:active { transform: scale(.97); }
+    .h-btn-wa:hover { background: var(--wad); }
+    .h-btn-wa svg { width: 14px; height: 14px; fill: #fff; flex-shrink: 0; }
+
+    /* ── HERO ─────────────────────────────────────── */
+    /* Clean, no bg image on hero — elegance first */
+    .hero {
+      min-height: 100svh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 80px 20px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Subtle geometric bg */
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 85% 50%, rgba(249,115,22,0.07) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 80% at 5% 90%, rgba(251,191,36,0.04) 0%, transparent 60%);
+    }
+    /* Thin accent line left */
+    .hero::after {
+      content: '';
+      position: absolute; left: 20px; top: 80px; bottom: 48px; width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(249,115,22,.3) 30%, rgba(249,115,22,.3) 70%, transparent);
+      z-index: 0;
+    }
+    .hero-in {
+      position: relative; z-index: 1;
+      max-width: 1120px; margin: 0 auto; width: 100%;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-bottom: 20px;
+      opacity: 0; animation: rise .5s .1s forwards;
+    }
+    .hero-eyebrow-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--flame);
+      flex-shrink: 0;
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 11.5vw, 6rem);
+      line-height: .92; letter-spacing: .015em; color: #fff;
+      opacity: 0; animation: rise .55s .22s forwards;
+    }
+    .hero h1 span { color: var(--ac); }
+    .hero-sub {
+      margin-top: 18px;
+      font-size: clamp(.88rem, 3vw, 1rem);
+      color: #a8a8b4; max-width: 480px; line-height: 1.7;
+      opacity: 0; animation: rise .55s .36s forwards;
+    }
+    .hero-tags {
+      margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px;
+      opacity: 0; animation: rise .55s .48s forwards;
+    }
+    .tag {
+      font-size: .72rem; color: var(--tx);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 6px 12px; border-radius: 2px;
+      letter-spacing: .03em;
+      display: inline-flex; align-items: center; gap: 5px;
+    }
+    .tag b { color: var(--ac); font-weight: 600; }
+    .hero-cta {
+      margin-top: 28px;
+      display: flex; flex-direction: column; gap: 10px;
+      opacity: 0; animation: rise .55s .6s forwards;
+    }
+    .btn-primary {
+      display: flex; align-items: center; justify-content: center; gap: 9px;
+      background: var(--ac); color: #fff;
+      font-size: .86rem; font-weight: 600;
+      letter-spacing: .07em; text-transform: uppercase;
+      padding: 16px 24px; border-radius: var(--r); border: none; cursor: pointer;
+      transition: background .2s, transform .12s, box-shadow .2s;
+      width: 100%;
+    }
+    .btn-primary:active { transform: scale(.98); }
+    .btn-primary:hover { background: var(--acd); box-shadow: 0 6px 20px rgba(249,115,22,.22); }
+    .btn-primary svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
+    .btn-ghost {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: rgba(34,197,94,0.08);
+      color: #6ee89a;
+      font-size: .84rem; font-weight: 500; letter-spacing: .04em;
+      padding: 14px 24px; border-radius: var(--r);
+      border: 1px solid rgba(34,197,94,0.30);
+      transition: background .2s, color .2s, border-color .2s;
+      width: 100%;
+    }
+    .btn-ghost:hover {
+      background: rgba(34,197,94,0.15);
+      color: #86efac;
+      border-color: rgba(34,197,94,0.5);
+    }
+
+    /* ── TRUST BAR ─────────────────────────────────── */
+    .trust {
+      background: var(--s1);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .trust-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      max-width: 1120px; margin: 0 auto;
+    }
+    .trust-item {
+      padding: 20px 16px; text-align: center;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .trust-item:nth-child(2) { border-right: none; }
+    .trust-item:nth-child(3) { border-bottom: none; }
+    .trust-item:nth-child(4) { border-right: none; border-bottom: none; }
+    .trust-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.85rem; line-height: 1; display: block;
+      background: var(--flame);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .trust-lbl {
+      font-size: .67rem; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--tx3); margin-top: 3px; display: block;
+    }
+
+    /* ── SECTION HELPERS ───────────────────────────── */
+    .sec { padding: 64px 20px; }
+    .sec-in { max-width: 1120px; margin: 0 auto; }
+    .s1 { background: var(--bg); }
+    .s2 { background: var(--s1); }
+    .s3 { background: var(--s2); }
+    .s4 { background: var(--s3); }
+
+    .sec-hd { margin-bottom: 32px; }
+    .sec-hd .eyebrow { margin-bottom: 10px; }
+    .sec-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.9rem, 6.5vw, 3.2rem);
+      letter-spacing: .02em; color: #fff; line-height: 1;
+      margin-bottom: 8px;
+    }
+    .sec-rule {
+      width: 36px; height: 2px;
+      background: var(--flame);
+      margin-bottom: 14px;
+    }
+    .sec-desc {
+      font-size: .87rem; color: var(--tx2);
+      max-width: 440px; line-height: 1.72;
+    }
+
+    /* ── PROBLEMS ──────────────────────────────────── */
+    .prob-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--r); overflow: hidden;
+    }
+    .prob-card {
+      background: var(--s1); padding: 22px 18px;
+      display: flex; flex-direction: column; gap: 8px;
+      position: relative; overflow: hidden;
+      transition: background .2s;
+    }
+    .prob-card::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+      width: 0; border-left: 2px solid var(--ac);
+      transition: width .2s;
+    }
+    .prob-card:hover { background: var(--s2); }
+    .prob-card:hover::before { width: 2px; }
+    .prob-ic { font-size: 1.5rem; }
+    .prob-name { font-weight: 500; font-size: .87rem; color: #fff; line-height: 1.3; }
+    .prob-desc { font-size: .78rem; color: var(--tx2); line-height: 1.55; }
+
+    /* ── SERVICES ──────────────────────────────────── */
+    /* No text on images — clean cards */
+    .svc-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 1px; background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--r); overflow: hidden;
+    }
+    .svc-card { background: var(--s2); transition: background .2s; }
+    .svc-card:hover { background: var(--s3); }
+    .svc-img {
+      width: 100%; height: 160px; object-fit: cover;
+      display: block;
+      filter: brightness(.72) saturate(.8);
+      transition: filter .3s;
+    }
+    .svc-card:hover .svc-img { filter: brightness(.88) saturate(1); }
+    .svc-body { padding: 18px 20px 22px; }
+    .svc-name {
+      font-weight: 500; font-size: .92rem; color: #fff;
+      margin-bottom: 6px;
+    }
+    .svc-desc { font-size: .8rem; color: var(--tx2); line-height: 1.6; }
+
+    /* ── GALLERY ───────────────────────────────────── */
+    /* Simple grid, no text overlap */
+    .gal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      border-radius: var(--r); overflow: hidden;
+    }
+    .gal-item { overflow: hidden; aspect-ratio: 1/1; }
+    .gal-item.wide { grid-column: span 2; aspect-ratio: 16/8; }
+    .gal-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: brightness(.7) saturate(.85);
+      transition: filter .4s, transform .5s;
+    }
+    .gal-item:hover img { filter: brightness(.9) saturate(1); transform: scale(1.04); }
+
+    /* ── ABOUT ─────────────────────────────────────── */
+    /* Mobile: stacked cleanly. No frame overlaps. */
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: var(--r);
+      filter: brightness(.85);
+      margin-bottom: 28px;
+      display: block;
+    }
+    .about-text p {
+      font-size: .86rem; color: var(--tx2);
+      margin-bottom: 12px; line-height: 1.78;
+    }
+    .perks {
+      display: grid; grid-template-columns: 1fr;
+      gap: 8px; margin-top: 18px;
+    }
+    .perk {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 12px 14px;
+      background: var(--s1); border: 1px solid var(--line);
+      border-radius: var(--r);
+      font-size: .8rem; color: var(--tx2);
+    }
+    .perk-ic { flex-shrink: 0; font-size: .95rem; margin-top: 1px; }
+
+    /* ── CTA STRIP ─────────────────────────────────── */
+    .strip {
+      background: var(--s3);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 48px 20px; text-align: center;
+    }
+    .strip-in { max-width: 500px; margin: 0 auto; }
+    .strip h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 7vw, 2.8rem);
+      color: #fff; letter-spacing: .02em; margin-bottom: 10px;
+    }
+    .strip p { font-size: .85rem; color: var(--tx2); margin-bottom: 24px; line-height: 1.7; }
+    .strip-btns { display: flex; flex-direction: column; gap: 9px; }
+    .btn-wa-strip {
+      display: flex; align-items: center; justify-content: center; gap: 9px;
+      background: var(--wa); color: #fff;
+      font-size: .84rem; font-weight: 600;
+      letter-spacing: .07em; text-transform: uppercase;
+      padding: 15px 22px; border-radius: var(--r); border: none; cursor: pointer;
+      transition: background .2s;
+      width: 100%;
+    }
+    .btn-wa-strip:hover { background: var(--wad); }
+    .btn-wa-strip svg { width: 17px; height: 17px; fill: #fff; flex-shrink: 0; }
+    .btn-tel-strip {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: transparent; color: var(--tx2);
+      font-size: .82rem; letter-spacing: .04em;
+      padding: 13px 22px; border-radius: var(--r);
+      border: 1px solid var(--line);
+      transition: color .2s, border-color .2s;
+      width: 100%;
+    }
+    .btn-tel-strip:hover { color: var(--tx); border-color: var(--tx3); }
+    .strip-note {
+      margin-top: 14px;
+      font-size: .7rem; color: var(--tx3); letter-spacing: .03em;
+    }
+
+    /* ── WIZARD ────────────────────────────────────── */
+    .wiz-section-note {
+      text-align: center;
+      font-size: .8rem; color: var(--tx2);
+      margin-bottom: 20px;
+    }
+    .wiz-section-note strong { color: var(--ac); font-weight: 500; }
+
+    .wiz {
+      background: var(--s1);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      overflow: hidden;
+      max-width: 560px; margin: 0 auto;
+    }
+    .wiz-head {
+      padding: 14px 16px;
+      background: var(--s2);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .wiz-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem; color: #fff; letter-spacing: .05em;
+    }
+    .wiz-step {
+      font-size: .64rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--tx3);
+    }
+    .wiz-bar-wrap { height: 2px; background: var(--s3); }
+    .wiz-bar {
+      height: 100%; background: var(--flame);
+      transition: width .35s cubic-bezier(.4,0,.2,1);
+    }
+    .wiz-body { padding: 18px 16px 6px; min-height: 195px; }
+    .wiz-q {
+      font-size: .9rem; color: #fff; font-weight: 400;
+      margin-bottom: 16px; line-height: 1.5;
+    }
+
+    /* Option cards */
+    .opts { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+    .opts.c3 { grid-template-columns: 1fr 1fr 1fr; }
+    .opt {
+      border: 1px solid var(--line);
+      background: var(--s2);
+      padding: 13px 12px;
+      border-radius: var(--r);
+      cursor: pointer;
+      display: flex; align-items: center; gap: 8px;
+      min-height: 52px;
+      transition: border-color .15s, background .15s;
+      user-select: none; -webkit-user-select: none;
+    }
+    .opt:active { transform: scale(.97); }
+    .opt:hover { border-color: rgba(249,115,22,.4); background: rgba(249,115,22,.05); }
+    .opt.sel { border-color: var(--ac); background: rgba(249,115,22,.10); }
+    .opt-ic { font-size: 1.2rem; flex-shrink: 0; }
+    .opt-lb { font-size: .79rem; color: var(--tx); line-height: 1.3; }
+
+    /* Data fields */
+    .wfields { display: flex; flex-direction: column; gap: 10px; }
+    .wrow { display: grid; grid-template-columns: 1fr; gap: 9px; }
+    .wfld { display: flex; flex-direction: column; gap: 5px; }
+    .wfld label { font-size: .62rem; letter-spacing: .15em; text-transform: uppercase; color: var(--tx3); }
+    .wfld input {
+      background: var(--s3); border: 1px solid var(--line);
+      color: var(--tx); font-family: 'Inter', sans-serif;
+      font-size: .9rem; padding: 12px 13px;
+      border-radius: var(--r); outline: none;
+      transition: border-color .2s; -webkit-appearance: none;
+    }
+    .wfld input:focus { border-color: var(--ac); }
+    .wfld input::placeholder { color: var(--tx3); }
+
+    .wiz-foot {
+      padding: 12px 16px;
+      border-top: 1px solid var(--line);
+      background: var(--s2);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 8px;
+    }
+    .btn-bk {
+      font-family: 'Inter', sans-serif;
+      background: transparent; color: var(--tx3);
+      font-size: .72rem; letter-spacing: .06em; text-transform: uppercase;
+      padding: 9px 0; border: none; cursor: pointer;
+      transition: color .2s; flex-shrink: 0;
+    }
+    .btn-bk:hover { color: var(--tx2); }
+    .btn-bk:disabled { opacity: .3; cursor: default; }
+    .btn-nx {
+      font-family: 'Inter', sans-serif;
+      background: var(--ac); color: #fff; font-weight: 600;
+      font-size: .75rem; letter-spacing: .06em; text-transform: uppercase;
+      padding: 12px 16px; border-radius: var(--r); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 5px;
+      flex: 1;
+      white-space: nowrap;
+      transition: background .2s, transform .12s;
+    }
+    .btn-nx:hover { background: var(--acd); transform: translateY(-1px); }
+    .btn-nx:disabled { background: var(--s3); color: var(--tx3); cursor: default; transform: none; }
+
+    /* Success */
+    .wsuc { display: none; padding: 36px 22px; text-align: center; }
+    .wsuc.on { display: block; }
+    .wsuc-ic { font-size: 2.8rem; margin-bottom: 12px; }
+    .wsuc-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem; color: #fff; letter-spacing: .04em; margin-bottom: 8px;
+    }
+    .wsuc-sub { font-size: .82rem; color: var(--tx2); margin-bottom: 18px; line-height: 1.6; }
+    .btn-re {
+      background: transparent; color: var(--tx3);
+      font-size: .72rem; border: 1px solid var(--line);
+      padding: 8px 14px; border-radius: var(--r); cursor: pointer;
+      transition: color .2s, border-color .2s;
+    }
+    .btn-re:hover { color: var(--tx2); border-color: var(--tx3); }
+
+    /* ── FOOTER ────────────────────────────────────── */
+    footer {
+      background: var(--s3);
+      border-top: 1px solid var(--line);
+      padding: 44px 20px 32px;
+    }
+    .foot-logo-row { display: flex; align-items: center; gap: 9px; margin-bottom: 6px; }
+    .foot-logo-row img { height: 28px; width: auto; border-radius: 3px; filter: brightness(1.05); }
+    .foot-logo-txt {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem; letter-spacing: .07em; color: #fff;
+    }
+    .foot-logo-txt em { color: var(--ac); font-style: normal; }
+    .foot-tagline { font-size: .75rem; color: var(--tx3); margin-bottom: 18px; }
+    .foot-contacts { display: flex; flex-direction: column; gap: 8px; margin-bottom: 26px; }
+    .foot-contacts a {
+      display: flex; align-items: center; gap: 8px;
+      font-size: .8rem; color: var(--tx2);
+      transition: color .2s;
+    }
+    .foot-contacts a:hover { color: var(--ac); }
+    .foot-cols {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      border-top: 1px solid var(--line); padding-top: 24px;
+      margin-bottom: 24px;
+    }
+    .foot-col-title {
+      font-size: .63rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--ac); margin-bottom: 12px;
+    }
+    .foot-links { display: flex; flex-direction: column; gap: 8px; }
+    .foot-links a { font-size: .78rem; color: var(--tx3); transition: color .2s; }
+    .foot-links a:hover { color: var(--tx2); }
+    .foot-bottom {
+      border-top: 1px solid var(--line); padding-top: 16px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .foot-copy { font-size: .69rem; color: var(--tx3); }
+    .foot-ig {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: .73rem; color: var(--tx3); transition: color .2s;
+    }
+    .foot-ig:hover { color: var(--ac); }
+    .foot-note {
+      font-size: .66rem; color: var(--tx3); line-height: 1.6;
+      border-top: 1px solid var(--line); padding-top: 12px; margin-top: 4px;
+    }
+
+    /* ── WA FLOAT ──────────────────────────────────── */
+    .wafloat {
+      position: fixed; bottom: 18px; right: 14px; z-index: 400;
+      display: flex; align-items: center; gap: 8px;
+      background: var(--wa); color: #fff;
+      font-size: .74rem; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase;
+      padding: 12px 16px; border-radius: 50px;
+      box-shadow: 0 4px 18px rgba(34,197,94,.3);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .wafloat:hover { transform: scale(1.04); box-shadow: 0 6px 24px rgba(34,197,94,.45); }
+    .wafloat:active { transform: scale(.97); }
+    .wafloat svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
+
+    /* ── ANIMATIONS ────────────────────────────────── */
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── DESKTOP (≥900px) ──────────────────────────── */
+    @media (min-width: 900px) {
+      header { height: 66px; padding: 0 44px; }
+      .h-logo img { height: 40px; }
+      .h-tel { display: inline-flex; }
+      .h-logo-name { font-size: 1.25rem; max-width: none; }
+
+      .hero { padding: 0; }
+      .hero::after { left: 44px; top: 66px; }
+      .hero-in {
+        display: grid; grid-template-columns: 1fr 1fr;
+        gap: 60px; align-items: center;
+        padding: 110px 44px 80px;
+      }
+      .hero-cta { flex-direction: row; }
+      .btn-primary, .btn-ghost { width: auto; }
+
+      .trust-grid { grid-template-columns: repeat(4,1fr); }
+      .trust-item { border-bottom: none; }
+      .trust-item:nth-child(2) { border-right: 1px solid var(--line); }
+      .trust-item:nth-child(3) { border-right: 1px solid var(--line); }
+
+      .sec { padding: 84px 44px; }
+      .prob-grid { grid-template-columns: repeat(3,1fr); }
+      .svc-grid { grid-template-columns: repeat(3,1fr); }
+      .svc-img { height: 185px; }
+
+      .gal-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 210px 210px;
+      }
+      .gal-item { aspect-ratio: unset; }
+      .gal-item.wide { grid-column: unset; grid-row: span 2; aspect-ratio: unset; }
+
+      .about-in {
+        display: grid; grid-template-columns: 1fr 1fr;
+        gap: 64px; align-items: center;
+      }
+      .about-photo { aspect-ratio: unset; height: 440px; margin-bottom: 0; }
+      .perks { grid-template-columns: 1fr 1fr; }
+
+      .strip { padding: 72px 44px; }
+      .strip-btns { flex-direction: row; justify-content: center; }
+      .btn-wa-strip, .btn-tel-strip { width: auto; }
+
+      .wiz-desktop {
+        display: grid; grid-template-columns: 1fr 1fr;
+        gap: 56px; align-items: start;
+      }
+      .wiz { max-width: 100%; }
+      .wiz-section-note { text-align: left; }
+      .wrow { grid-template-columns: 1fr 1fr; }
+      .btn-nx { flex: none; letter-spacing: .1em; padding: 11px 22px; }
+
+      footer { padding: 56px 44px 40px; }
+      .foot-desktop {
+        display: grid; grid-template-columns: 2fr 1fr 1fr;
+        gap: 48px; margin-bottom: 0;
+      }
+      .foot-contacts { margin-bottom: 0; }
+      .foot-cols-mobile { display: none; }
+      .foot-bottom { flex-direction: row; justify-content: space-between; align-items: center; }
+
+      .wafloat { bottom: 24px; right: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSW27ZD4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ── HEADER ─────────────────────────────────────────── -->
+<header>
+  <a class="h-logo" href="#">
+    <img src="https://static.wixstatic.com/media/1144e8_13302322bc1244b3bbd85bcbcb703984~mv2.jpeg"
+         alt="Prosperar Aquecedores" onerror="this.style.display='none'">
+    <span class="h-logo-name">Prosperar<em>.</em>Aquecedores</span>
+  </a>
+  <div class="h-right">
+    <a href="tel:+551125464519" class="h-tel"
+       onclick="converteu('telefone','header')">
+      📞 (11) 2546-4519
+    </a>
+    <a href="javascript:void(0)" class="h-btn-wa"
+       onclick="openWA('header')">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<!-- ── HERO ───────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-in">
+    <!-- Texto -->
+    <div>
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        <span class="eyebrow">Especialistas em aquecedores a gás · SP</span>
+      </div>
+      <h1>Seu conforto<br>começa com<br><span>a Prosperar.</span></h1>
+      <p class="hero-sub">Aquecedor apagando no banho? Não acende? Cheiro de gás? Resolvemos com segurança, rapidez e sem taxa de visita.</p>
+      <div class="hero-tags">
+        <span class="tag"><b>🔧</b> Todas as marcas</span>
+        <span class="tag"><b>⚡</b> Atendimento rápido</span>
+        <span class="tag"><b>🚫</b> Sem taxa de visita*</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#orcamento" class="btn-primary">
+          Solicitar orçamento grátis →
+        </a>
+        <a href="javascript:void(0)" class="btn-ghost" onclick="openWA('hero')">
+          <svg style="width:16px;height:16px;fill:currentColor;flex-shrink:0" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Falar direto no WhatsApp
+        </a>
+      </div>
+    </div>
+    <!-- Wizard no hero (desktop) -->
+    <div id="hero-wiz-slot"></div>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ──────────────────────────────────────── -->
+<div class="trust">
+  <div class="trust-grid">
+    <div class="trust-item"><span class="trust-num" style="font-size:1.3rem">Rápido</span><span class="trust-lbl">Atendimento em tempo real</span></div>
+    <div class="trust-item"><span class="trust-num">100%</span><span class="trust-lbl">Técnicos especializados</span></div>
+    <div class="trust-item"><span class="trust-num">SP</span><span class="trust-lbl">Grande São Paulo</span></div>
+    <div class="trust-item"><span class="trust-num">Grátis</span><span class="trust-lbl">Sem taxa de visita*</span></div>
+  </div>
+</div>
+
+<!-- ── PROBLEMAS ─────────────────────────────────────── -->
+<section class="sec s2">
+  <div class="sec-in">
+    <div class="sec-hd">
+      <div class="eyebrow">Reconhece algum desses?</div>
+      <h2 class="sec-title">Problemas que resolvemos</h2>
+      <div class="sec-rule"></div>
+      <p class="sec-desc">Do diagnóstico ao conserto — todas as marcas e modelos, com garantia.</p>
+    </div>
+    <div class="prob-grid">
+      <div class="prob-card"><div class="prob-ic">💧</div><div class="prob-name">Água fria ou morna</div><div class="prob-desc">Termostato, trocador de calor ou regulagem fora do padrão.</div></div>
+      <div class="prob-card"><div class="prob-ic">🔴</div><div class="prob-name">Não acende</div><div class="prob-desc">Ignição falhando, eletrodo ou pilha com problema.</div></div>
+      <div class="prob-card"><div class="prob-ic">🔥</div><div class="prob-name">Chama apaga no banho</div><div class="prob-desc">Válvula de gás, sensor de chama ou pressão irregular.</div></div>
+      <div class="prob-card"><div class="prob-ic">⚠️</div><div class="prob-name">Cheiro de gás</div><div class="prob-desc">Emergência — desligue o gás e nos chame agora.</div></div>
+      <div class="prob-card"><div class="prob-ic">🔊</div><div class="prob-name">Barulho / vibração</div><div class="prob-desc">Pressão irregular ou componentes desgastados.</div></div>
+      <div class="prob-card"><div class="prob-ic">🔧</div><div class="prob-name">Manutenção preventiva</div><div class="prob-desc">Revisão periódica para segurança e vida útil máxima.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVIÇOS ───────────────────────────────────────── -->
+<section class="sec s3">
+  <div class="sec-in">
+    <div class="sec-hd">
+      <div class="eyebrow">O que fazemos</div>
+      <h2 class="sec-title">Nossos serviços</h2>
+      <div class="sec-rule"></div>
+      <p class="sec-desc">Instalação, manutenção e conserto com excelência técnica.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <img class="svc-img" src="https://static.wixstatic.com/media/e91764_9964413aa69a45c5955e2619b37ca9e6~mv2.jpeg" alt="Coifa" loading="lazy">
+        <div class="svc-body"><div class="svc-name">Instalação de coifa e depurador</div><div class="svc-desc">Instalação segura para garantir ventilação ideal e qualidade do ar na cozinha.</div></div>
+      </div>
+      <div class="svc-card">
+        <img class="svc-img" src="https://static.wixstatic.com/media/1144e8_909515a6b32045fb90d61c032da9d449~mv2.jpeg" alt="Manutenção aquecedor" loading="lazy">
+        <div class="svc-body"><div class="svc-name">Manutenção e conserto de aquecedor</div><div class="svc-desc">Diagnóstico e reparo em todas as marcas. Rápido, seguro e com garantia.</div></div>
+      </div>
+      <div class="svc-card">
+        <img class="svc-img" src="https://static.wixstatic.com/media/1144e8_41964aca78f6464f8e93eed3925ffadc~mv2.jpeg" alt="Cooktop" loading="lazy">
+        <div class="svc-body"><div class="svc-name">Cooktop, forno e fogão</div><div class="svc-desc">Conversão GLP/GN e instalação dentro das normas técnicas vigentes.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALERIA ────────────────────────────────────────── -->
+<section class="sec s1">
+  <div class="sec-in">
+    <div class="sec-hd">
+      <div class="eyebrow">Nosso trabalho</div>
+      <h2 class="sec-title">Qualidade em cada serviço</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-item wide"><img src="https://static.wixstatic.com/media/1144e8_88ec40babf1e40b18e58308dce807b4f~mv2.jpeg" alt="Serviço Prosperar" loading="lazy"></div>
+      <div class="gal-item"><img src="https://static.wixstatic.com/media/1144e8_2b27f56ebb68404d9465d434f6f40d95~mv2.jpeg" alt="Técnico" loading="lazy"></div>
+      <div class="gal-item"><img src="https://static.wixstatic.com/media/1144e8_4ced8a7261a349cea9a7620d46d5b885~mv2.jpeg" alt="Instalação" loading="lazy"></div>
+      <div class="gal-item"><img src="https://static.wixstatic.com/media/1144e8_c90d7fb8b47f4baeaedbb81b9eeba810~mv2.jpeg" alt="Manutenção" loading="lazy"></div>
+      <div class="gal-item"><img src="https://static.wixstatic.com/media/1144e8_60692cefa4654cbb85d09b307dd493f1~mv2.jpeg" alt="Conserto" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOBRE ──────────────────────────────────────────── -->
+<section class="sec s2">
+  <div class="sec-in">
+    <div class="about-in">
+      <img class="about-photo"
+        src="https://static.wixstatic.com/media/1144e8_25decf6471764a6a8665abd0dd0d4297~mv2.jpg"
+        alt="Técnico Prosperar Aquecedores" loading="lazy">
+      <div>
+        <div class="eyebrow" style="margin-bottom:10px">Quem somos</div>
+        <h2 class="sec-title">Especialistas em<br>aquecedores a gás</h2>
+        <div class="sec-rule"></div>
+        <div class="about-text">
+          <p>A Prosperar Aquecedores é especializada em assistência técnica para aquecedores de água a gás, com atendimento técnico confiável para residências e comércios em toda Grande SP.</p>
+          <p>Nossa missão é proporcionar conforto térmico com segurança e transparência em cada serviço.</p>
+        </div>
+        <div class="perks">
+          <div class="perk"><span class="perk-ic">🔥</span><span>Especialistas em aquecedores a gás — manutenção, venda e conserto</span></div>
+          <div class="perk"><span class="perk-ic">⚡</span><span>Atendimento ágil e personalizado</span></div>
+          <div class="perk"><span class="perk-ic">📋</span><span>Instalações dentro das normas técnicas</span></div>
+          <div class="perk"><span class="perk-ic">🛡️</span><span>Garantia em peças e mão de obra</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA STRIP ──────────────────────────────────────── -->
+<div class="strip">
+  <div class="strip-in">
+    <h2>Problema no seu aquecedor?</h2>
+    <p>Prefere falar diretamente? Nossa equipe está disponível pelo WhatsApp ou telefone.</p>
+    <div class="strip-btns">
+      <a href="javascript:void(0)" class="btn-wa-strip" onclick="openWA('strip')">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chamar no WhatsApp
+      </a>
+      <a href="tel:+551125464519" class="btn-tel-strip"
+         onclick="converteu('telefone','strip')">
+        📞 (11) 2546-4519
+      </a>
+    </div>
+    <p class="strip-note">Ou use o formulário abaixo para nos contar o que precisa — resposta rápida ↓</p>
+  </div>
+</div>
+
+<!-- ── ORÇAMENTO (WIZARD) ────────────────────────────── -->
+<section class="sec s3" id="orcamento">
+  <div class="sec-in">
+    <div class="wiz-desktop">
+      <!-- Info -->
+      <div>
+        <div class="eyebrow" style="margin-bottom:10px">Formulário de orçamento</div>
+        <h2 class="sec-title">Orçamento<br>100% gratuito</h2>
+        <div class="sec-rule"></div>
+        <p style="font-size:.86rem;color:var(--tx2);margin-bottom:20px;line-height:1.75">Responda 5 perguntas rápidas. Nossa equipe monta o orçamento e entra em contato pelo WhatsApp.</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:9px">
+          <li style="display:flex;align-items:center;gap:9px;font-size:.83rem;color:var(--tx2)"><span style="width:5px;height:5px;border-radius:50%;background:var(--ac);flex-shrink:0"></span>Técnicos especializados em todas as marcas</li>
+          <li style="display:flex;align-items:center;gap:9px;font-size:.83rem;color:var(--tx2)"><span style="width:5px;height:5px;border-radius:50%;background:var(--ac);flex-shrink:0"></span>Rinnai, Lorenzetti, Komeco, Bosch e mais</li>
+          <li style="display:flex;align-items:center;gap:9px;font-size:.83rem;color:var(--tx2)"><span style="width:5px;height:5px;border-radius:50%;background:var(--ac);flex-shrink:0"></span>Sem taxa de visita (consulte sua região)</li>
+          <li style="display:flex;align-items:center;gap:9px;font-size:.83rem;color:var(--tx2)"><span style="width:5px;height:5px;border-radius:50%;background:var(--ac);flex-shrink:0"></span>Atendimento rápido</li>
+        </ul>
+      </div>
+      <!-- Wizard -->
+      <div>
+        <p class="wiz-section-note">Canal preferencial — <strong>mais rápido e completo</strong></p>
+        <div class="wiz" id="wizard">
+          <div class="wiz-head">
+            <span class="wiz-title" id="wt">Qual o serviço?</span>
+            <span class="wiz-step" id="ws">1 / 5</span>
+          </div>
+          <div class="wiz-bar-wrap"><div class="wiz-bar" id="wb" style="width:20%"></div></div>
+
+          <!-- Passo 1 -->
+          <div class="wiz-body" id="p1">
+            <div class="wiz-q">O que você precisa?</div>
+            <div class="opts">
+              <div class="opt" data-s="1" data-v="Manutenção e conserto de aquecedor"><span class="opt-ic">🔧</span><span class="opt-lb">Manutenção / conserto</span></div>
+              <div class="opt" data-s="1" data-v="Instalação de aquecedor a gás"><span class="opt-ic">⚙️</span><span class="opt-lb">Instalação nova</span></div>
+              <div class="opt" data-s="1" data-v="Instalação de coifa ou depurador"><span class="opt-ic">💨</span><span class="opt-lb">Coifa / depurador</span></div>
+              <div class="opt" data-s="1" data-v="Cooktop, forno ou fogão"><span class="opt-ic">🍳</span><span class="opt-lb">Cooktop / forno</span></div>
+            </div>
+          </div>
+
+          <!-- Passo 2 -->
+          <div class="wiz-body" id="p2" style="display:none">
+            <div class="wiz-q">Qual é o problema principal?</div>
+            <div class="opts">
+              <div class="opt" data-s="2" data-v="Não acende / ignição falhando"><span class="opt-ic">🔴</span><span class="opt-lb">Não acende</span></div>
+              <div class="opt" data-s="2" data-v="Água fria ou morna"><span class="opt-ic">💧</span><span class="opt-lb">Água fria / morna</span></div>
+              <div class="opt" data-s="2" data-v="Chama apaga durante o uso"><span class="opt-ic">🔥</span><span class="opt-lb">Chama apaga</span></div>
+              <div class="opt" data-s="2" data-v="Cheiro de gás / vazamento"><span class="opt-ic">⚠️</span><span class="opt-lb">Cheiro de gás</span></div>
+              <div class="opt" data-s="2" data-v="Barulho ou vibração"><span class="opt-ic">🔊</span><span class="opt-lb">Barulho</span></div>
+              <div class="opt" data-s="2" data-v="Preventiva ou instalação nova"><span class="opt-ic">✅</span><span class="opt-lb">Preventiva</span></div>
+            </div>
+          </div>
+
+          <!-- Passo 3 -->
+          <div class="wiz-body" id="p3" style="display:none">
+            <div class="wiz-q">Qual a urgência?</div>
+            <div class="opts">
+              <div class="opt" data-s="3" data-v="Urgente — preciso hoje ou amanhã"><span class="opt-ic">🚨</span><span class="opt-lb">Urgente — hoje/amanhã</span></div>
+              <div class="opt" data-s="3" data-v="Esta semana"><span class="opt-ic">📅</span><span class="opt-lb">Esta semana</span></div>
+              <div class="opt" data-s="3" data-v="Sem urgência — só orçamento"><span class="opt-ic">💬</span><span class="opt-lb">Só orçamento</span></div>
+              <div class="opt" data-s="3" data-v="A combinar"><span class="opt-ic">🤝</span><span class="opt-lb">A combinar</span></div>
+            </div>
+          </div>
+
+          <!-- Passo 4 -->
+          <div class="wiz-body" id="p4" style="display:none">
+            <div class="wiz-q">Qual a marca? (se souber)</div>
+            <div class="opts c3">
+              <div class="opt" data-s="4" data-v="Rinnai"><span class="opt-ic">🏷️</span><span class="opt-lb">Rinnai</span></div>
+              <div class="opt" data-s="4" data-v="Lorenzetti"><span class="opt-ic">🏷️</span><span class="opt-lb">Lorenzetti</span></div>
+              <div class="opt" data-s="4" data-v="Bosch"><span class="opt-ic">🏷️</span><span class="opt-lb">Bosch</span></div>
+              <div class="opt" data-s="4" data-v="Komeco"><span class="opt-ic">🏷️</span><span class="opt-lb">Komeco</span></div>
+              <div class="opt" data-s="4" data-v="Outra marca"><span class="opt-ic">🏷️</span><span class="opt-lb">Outra</span></div>
+              <div class="opt" data-s="4" data-v="Não sei"><span class="opt-ic">❓</span><span class="opt-lb">Não sei</span></div>
+            </div>
+          </div>
+
+          <!-- Passo 5 -->
+          <div class="wiz-body" id="p5" style="display:none">
+            <div class="wiz-q">Último passo — seus dados 👇</div>
+            <div class="wfields">
+              <div class="wrow">
+                <div class="wfld"><label>Nome</label><input type="text" id="wname" placeholder="Seu nome" autocomplete="name"></div>
+                <div class="wfld"><label>WhatsApp</label><input type="tel" id="wphone" placeholder="(11) 9 0000-0000" autocomplete="tel" inputmode="tel"></div>
+              </div>
+              <div class="wrow">
+                <div class="wfld"><label>Bairro</label><input type="text" id="wneigh" placeholder="Seu bairro" autocomplete="address-level3"></div>
+                <div class="wfld"><label>Cidade</label><input type="text" id="wcity" placeholder="São Paulo" value="São Paulo" autocomplete="address-level2"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sucesso -->
+          <div class="wsuc" id="wsuc">
+            <div class="wsuc-ic">✅</div>
+            <div class="wsuc-title">Orçamento enviado!</div>
+            <p class="wsuc-sub">Você foi redirecionado ao WhatsApp com todas as informações.<br>Retornamos imediatamente.</p>
+            <button class="btn-re" onclick="wReset()">Novo pedido</button>
+          </div>
+
+          <div class="wiz-foot" id="wfoot">
+            <button class="btn-bk" id="bbk" onclick="wBack()" disabled>← Voltar</button>
+            <button class="btn-nx" id="bnx" onclick="wNext()" disabled>Próximo →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer>
+  <div style="max-width:1120px;margin:0 auto">
+
+    <!-- Desktop layout -->
+    <div class="foot-desktop">
+      <div>
+        <div class="foot-logo-row">
+          <img src="https://static.wixstatic.com/media/1144e8_13302322bc1244b3bbd85bcbcb703984~mv2.jpeg" alt="Logo" onerror="this.style.display='none'">
+          <span class="foot-logo-txt">Prosperar<em>.</em>Aquecedores</span>
+        </div>
+        <div class="foot-tagline">Especialistas em aquecedores a gás · São Paulo</div>
+        <div class="foot-contacts">
+          <a href="javascript:void(0)" onclick="openWA('footer')">
+            <svg style="width:15px;height:15px;fill:#22c55e;flex-shrink:0" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            (11) 9 4849-7068
+          </a>
+          <a href="tel:+551125464519" onclick="converteu('telefone','footer')">📞 (11) 2546-4519</a>
+          <a href="mailto:prosperaraquecedores@gmail.com">✉️ prosperaraquecedores@gmail.com</a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-col-title">Serviços</div>
+        <div class="foot-links">
+          <a href="#">Manutenção e conserto</a>
+          <a href="#">Instalação de aquecedor</a>
+          <a href="#">Coifa e depurador</a>
+          <a href="#">Cooktop, forno e fogão</a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-col-title">Empresa</div>
+        <div class="foot-links">
+          <a href="https://www.prosperaraquecedores.com/sobre-a-empresa" target="_blank">Sobre a empresa</a>
+          <a href="https://www.prosperaraquecedores.com/aquecedores" target="_blank">Nossos produtos</a>
+          <a href="https://www.prosperaraquecedores.com/contato" target="_blank">Contato</a>
+          <a href="https://www.prosperaraquecedores.com/politica-de-privacidade" target="_blank">Privacidade</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile layout -->
+    <div class="foot-cols-mobile">
+      <div class="foot-logo-row">
+        <img src="https://static.wixstatic.com/media/1144e8_13302322bc1244b3bbd85bcbcb703984~mv2.jpeg" alt="Logo" onerror="this.style.display='none'">
+        <span class="foot-logo-txt">Prosperar<em>.</em>Aquecedores</span>
+      </div>
+      <div class="foot-tagline">Especialistas em aquecedores a gás · SP</div>
+      <div class="foot-contacts">
+        <a href="javascript:void(0)" onclick="openWA('footer')">
+          <svg style="width:15px;height:15px;fill:#22c55e;flex-shrink:0" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          (11) 9 4849-7068
+        </a>
+        <a href="tel:+551125464519" onclick="converteu('telefone','footer')">📞 (11) 2546-4519</a>
+        <a href="mailto:prosperaraquecedores@gmail.com">✉️ prosperaraquecedores@gmail.com</a>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <div class="foot-col-title">Serviços</div>
+          <div class="foot-links">
+            <a href="#">Manutenção e conserto</a>
+            <a href="#">Instalação</a>
+            <a href="#">Coifa e depurador</a>
+            <a href="#">Cooktop e fogão</a>
+          </div>
+        </div>
+        <div>
+          <div class="foot-col-title">Empresa</div>
+          <div class="foot-links">
+            <a href="https://www.prosperaraquecedores.com/sobre-a-empresa" target="_blank">Sobre</a>
+            <a href="https://www.prosperaraquecedores.com/contato" target="_blank">Contato</a>
+            <a href="https://www.prosperaraquecedores.com/politica-de-privacidade" target="_blank">Privacidade</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <p class="foot-copy">© 2025 Prosperar Aquecedores · Todos os direitos reservados</p>
+      <a href="https://www.instagram.com/prosperaraquecedores" target="_blank" class="foot-ig">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @prosperaraquecedores
+      </a>
+    </div>
+    <p class="foot-note">*Sem taxa de visita mediante realização do serviço nas regiões atendidas. Consulte disponibilidade.</p>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="javascript:void(0)" class="wafloat" onclick="openWA('float')">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>
+/* ─── openWA: abre WA com mensagem rastreável + dispara lead ─── */
+function openWA(origin) {
+  var msg = encodeURIComponent(
+    'Oi, vim pelo site da Prosperar! Preciso de ajuda com meu aquecedor. \uD83D\uDD25'
+  );
+  converteu('wa_direto', 'wa_' + origin);
+  window.open('https://api.whatsapp.com/send?phone=5511948497068&text=' + msg, '_blank');
+}
+
+/* ─── WIZARD ─────────────────────────────────────────────────── */
+var TOTAL = 5;
+var cur   = 1;
+var ans   = {};
+var TITLES = {
+  1: 'Qual o serviço?',
+  2: 'Qual o problema?',
+  3: 'Qual a urgência?',
+  4: 'Qual a marca?',
+  5: 'Seus dados'
+};
+
+function wRender() {
+  document.getElementById('wt').textContent = TITLES[cur];
+  document.getElementById('ws').textContent = cur + ' / ' + TOTAL;
+  document.getElementById('wb').style.width = (cur / TOTAL * 100) + '%';
+  for (var i = 1; i <= TOTAL; i++) {
+    var el = document.getElementById('p' + i);
+    if (el) el.style.display = i === cur ? 'block' : 'none';
+  }
+  document.getElementById('bbk').disabled = cur === 1;
+  if (cur === TOTAL) {
+    document.getElementById('bnx').textContent = 'Enviar pelo WhatsApp \u2192';
+    wVal5();
+  } else {
+    document.getElementById('bnx').textContent = 'Pr\u00f3ximo \u2192';
+    document.getElementById('bnx').disabled = !ans[cur];
+  }
+}
+
+document.querySelectorAll('.opt').forEach(function(o) {
+  o.addEventListener('click', function() {
+    var s = parseInt(o.dataset.s);
+    document.querySelectorAll('[data-s="' + s + '"]').forEach(function(x) {
+      x.classList.remove('sel');
+    });
+    o.classList.add('sel');
+    ans[s] = o.dataset.v;
+    if (cur < TOTAL) {
+      document.getElementById('bnx').disabled = false;
+      setTimeout(wNext, 260);
+    }
+  });
+});
+
+function wVal5() {
+  var ok = document.getElementById('wname').value.trim() &&
+           document.getElementById('wphone').value.trim();
+  document.getElementById('bnx').disabled = !ok;
+}
+['wname','wphone'].forEach(function(id) {
+  document.getElementById(id).addEventListener('input', wVal5);
+});
+
+document.getElementById('wphone').addEventListener('input', function(e) {
+  var v = e.target.value.replace(/\D/g,'').substring(0,11);
+  if (v.length <= 10) v = v.replace(/^(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+  else v = v.replace(/^(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+  e.target.value = v;
+  wVal5();
+});
+
+function wNext() {
+  if (cur === TOTAL) { wSend(); return; }
+  if (!ans[cur]) return;
+  cur++;
+  wRender();
+}
+function wBack() { if (cur > 1) { cur--; wRender(); } }
+
+function wSend() {
+  var nome   = document.getElementById('wname').value.trim();
+  var tel    = document.getElementById('wphone').value.trim();
+  var bairro = document.getElementById('wneigh').value.trim();
+  var cidade = document.getElementById('wcity').value.trim();
+  if (!nome || !tel) { alert('Preencha nome e WhatsApp para continuar.'); return; }
+
+  var m = 'Ol\u00e1 Prosperar Aquecedores! Vim pelo site e gostaria de um or\u00e7amento.\n\n';
+  m += '*Nome:* ' + nome + '\n';
+  m += '*Telefone:* ' + tel + '\n';
+  if (ans[1]) m += '*Servi\u00e7o:* ' + ans[1] + '\n';
+  if (ans[2]) m += '*Problema:* ' + ans[2] + '\n';
+  if (ans[3]) m += '*Urg\u00eancia:* ' + ans[3] + '\n';
+  if (ans[4]) m += '*Marca:* ' + ans[4] + '\n';
+  if (bairro || cidade) m += '*Local:* ' + bairro + (bairro && cidade ? ' \u2013 ' : '') + cidade + '\n';
+
+  /* Evento único de conversão — wizard completo */
+  converteu('wizard', 'wizard_submit');
+
+  window.open('https://api.whatsapp.com/send?phone=5511948497068&text=' + encodeURIComponent(m), '_blank');
+
+  /* Mostrar tela de sucesso */
+  for (var i = 1; i <= TOTAL; i++) {
+    var el = document.getElementById('p' + i);
+    if (el) el.style.display = 'none';
+  }
+  document.getElementById('wfoot').style.display = 'none';
+  document.getElementById('wsuc').classList.add('on');
+  document.getElementById('wb').style.width = '100%';
+  document.getElementById('wt').textContent = 'Orçamento enviado!';
+  document.getElementById('ws').textContent = '\u2713';
+}
+
+function wReset() {
+  cur = 1;
+  ans = {};
+  document.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('sel'); });
+  ['wname','wphone','wneigh'].forEach(function(id){ document.getElementById(id).value = ''; });
+  document.getElementById('wsuc').classList.remove('on');
+  document.getElementById('wfoot').style.display = 'flex';
+  wRender();
+}
+
+wRender();
+
+/* Desktop: mover wizard para dentro do hero */
+(function() {
+  var mq = window.matchMedia('(min-width: 900px)');
+  function place() {
+    var slot = document.getElementById('hero-wiz-slot');
+    var wiz  = document.getElementById('wizard').parentElement; /* .wiz-wrap não existe, pega o div pai */
+    if (mq.matches) {
+      /* no desktop o wizard já está no grid do hero pela estrutura de seção */
+    }
+  }
+  place();
+})();
+</script>
+</body>
+</html>
